@@ -7,11 +7,16 @@
 </head>
 <body>
   <div id="root">
-    <h1>Main Page</h1>
-    <a id = href="http://localhost:1234/serve">move to a sub page</a>
+    <h1 id="title">Main Page</h1>
+    <a href="http://localhost:1234/serve">move to a sub page</a>
   </div>
   <script>
-
+    window.addEventListener("load", function() {  
+      const h1 = document.getElementById("title")
+      setTimeout(function(response) {
+        h1.textContent = "This page is no longer in service"
+      }, 5000)
+    })
   </script>
 </body>
 </html>

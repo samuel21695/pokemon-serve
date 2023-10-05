@@ -9,13 +9,13 @@ const server = http.createServer(function(request, response) {
     
     let doc =`<html> <head> </head> <body> <h1> Welcome! You entered to a main page. </h1> 
     <a href="http://localhost:1234/serve">move to a sub page</a> </body> </html>`
-    
-    setTimeout(function() {
-      let doc =`<html> <head> </head> <body> <h1> No Service </h1> </body> </html>`
-      response.end(doc);
-    }, 50);
 
     // response.end(doc);
+
+    setTimeout(() => {
+      let doc2 =`<html> <head> </head> <body> <h1> You are no longer in a main page. </h1> </body> </html>`
+     response.end(doc2)
+    }, 5000);
   }
 
     if(request.url === "/serve") {
