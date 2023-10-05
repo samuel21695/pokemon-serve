@@ -5,7 +5,7 @@ const server = http.createServer(function(request, response) {
   if(request.url === "/") {
     response.writeHead(200, {"Content-type": "text/html"});
 
-    let doc =`<html> <head> </head> <body> <h1> 메인페이지입니다. </h1> </body> </html>`
+    let doc =`<html> <head> </head> <body> <h1> Welcome! You entered to a main page. </h1> </body> </html>`
 
     response.end(doc)
     
@@ -14,7 +14,7 @@ const server = http.createServer(function(request, response) {
 
     response.writeHead(200, {"Content-type": "text/html"});
 
-    let doc =`<html> <head> </head> <body> <h1> 서브페이지입니다. </h1> </body> </html>`
+    let doc =`<html> <head> </head> <body> <h1> Welcome! You are in the sub page. </h1> </body> </html>`
 
     response.end(doc)
   }
